@@ -1,4 +1,4 @@
-<h2>Template</h2>
+<h1>Template</h1>
 <hr>
 
 <ul class="list-group">
@@ -22,5 +22,18 @@
          {{ item.text }} </li>
 </ul>
 
+<h2 class="mt-5">Validaciones</h2>
+<hr>
+
+<ul class="list-group">
+    <li *ngFor="let item of authMenu"
+        routerLinkActive='active'
+        [routerLinkActiveOptions]="{exact: true}"
+        [routerLink]="[ item.ruta ]"
+        class="list-group-item"
+        >
+        {{ item.text }}
+    </li>
+</ul>
 
 
